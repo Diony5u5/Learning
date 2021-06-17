@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>JD轮播图</title>
+    <link rel="stylesheet" href="./css/reset.css">
+<style>
+    .img-list{
+        /*
+        ul是一个块元素，不指定宽度，它就是占满
+        所以要设置宽度才能将图片居中
+         */
+        margin:100px auto;
+        width: 590px;
+        /* 
+        设置ul的宽高后可以使用overflow:hidden;切出590*470的显示窗口；
+        */
+        height: 470px;
+        /* overflow: hidden; */
+
+        /* 成为div定位的参照物 */
+        position: relative;
+    }
+
+    
+    /* 开启了li的绝对定位，脱离了文档流，浮在上方 */
+    .img-list li{
+            position: absolute;
+        }
+    /* 将第一（n）张图片放到最上边 */
+    .img-list li:nth-child(1){
+        z-index: 1;
+    }
+    
+    div.pointer a{
+        /* display: block; */
+        float: left;
+        width: 10px;
+        height: 10px;
+        margin: 0 4px;
+        border-radius: 50%;
+        background-color:rgba(255, 255, 255, .3);
+        /* 将背景颜色设置到内容区，边框和内边距不再有背景色 */
+        background-clip: content-box;
+        border:2px solid transparent;
+    }
+
+    div.pointer{
+        position:absolute;
+        z-index: 9999;
+        bottom: 20px;
+        left: 30px;
+    }
+
+    .pointer a.active,
+    .pointer a:hover{
+        background-color: #fff;
+        border:2px solid rgba(255, 255, 255, .3);
+    }
+</style>
+
+
+</head>
+<body>
+<ul class="img-list">
+    <li><a href="javascript:;"><img src="./img2/1.webp" alt=""></a></li>
+    <li><a href="javascript:;"><img src="./img2/2.jpg" alt=""></a></li>
+    <li><a href="javascript:;"><img src="./img2/3.webp" alt=""></a></li>
+    <li><a href="javascript:;"><img src="./img2/4.jpg" alt=""></a></li>
+    <li><a href="javascript:;"><img src="./img2/5.webp" alt=""></a></li>
+    <li><a href="javascript:;"><img src="./img2/6.webp" alt=""></a></li>
+    <li><a href="javascript:;"><img src="./img2/7.webp" alt=""></a></li>
+    <li><a href="javascript:;"><img src="./img2/8.webp" alt=""></a></li>
+
+    <div class="pointer">
+        <a class="active" href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+    </div>
+</ul>
+</body>
+</html>
