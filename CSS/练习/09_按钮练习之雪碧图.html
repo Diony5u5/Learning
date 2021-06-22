@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态按钮</title>
+
+
+    <style>
+        /* :link  选择器用于选取未被访问的链接；
+           :hover 选择器用于设置鼠标指针浮动到链接上时的样式；
+           :active 选择器用于设置点击链接时的样式；
+           :visited 选择器对指向已访问页面的链接设置样式。      
+        */
+
+        a:link{
+            display: block;
+            width: 93px;
+            height: 29px;
+            background-image: url('./img/09/btn.png');
+        }
+
+        a:hover{
+            /* 水平向左移动93像素 */
+            background-position: -93px 0;
+        }
+
+        a:active{
+            /* 水平向左移动186像素 */
+            background-position: -186px 0;
+        }
+        /* 
+            解决图片的闪烁问题：
+                将多个小图片合成为一个大图片，通过调整大图片的位置来
+                显示出正确的图像，这个大图片浏览器只需要加载1次，
+                能够有效避免闪烁的问题，这种技术叫做css-sprite，
+                这个大图片成为雪碧图。
+
+            雪碧图的使用步骤：
+                1.确定要用的图像；
+                2.测量图像的大小；
+                3.根据测量结果创建一个元素
+                4.将雪碧图设置为元素的背景图片
+                5.设置一个偏移量以显示预期的图像。
+            
+            雪碧图的特点
+                一次性将多个图片加载到页面，降低了浏览器请求的次数，加快访问速度，
+                提升用户体验。
+        
+         */
+
+         .box1{
+             width: 128px;
+             height: 46px;
+             background-image: url('./img/09/amazon-sprite_.png');
+             background-position: 0 0;
+         }
+         .box2{
+             width: 42px;
+             height: 30px;
+             background-image: url('./img/09/amazon-sprite_.png');
+             background-position: -58px -338px;
+         }
+
+    </style>
+</head>
+<body>
+
+    <a href="javascript:;"></a>
+
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+
+
+</body>
+</html>

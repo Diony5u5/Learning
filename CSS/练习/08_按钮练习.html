@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态按钮</title>
+
+
+    <style>
+        /* :link  选择器用于选取未被访问的链接；
+           :hover 选择器用于设置鼠标指针浮动到链接上时的样式；
+           :active 选择器用于设置点击链接时的样式；
+           :visited 选择器对指向已访问页面的链接设置样式。      
+        */
+
+        a:link{
+            display: block;
+            width: 93px;
+            height: 29px;
+            background-image: url('./img/08/link.png');
+        }
+
+        a:hover{
+            background-image: url('./img/08/hover.png');
+        }
+
+        a:active{
+
+            background-image: url('./img/08/active.png');
+        }
+        /* 
+                图片属于HTML网页中的外部资源，外部资源需要浏览器单独发送请求加载，
+            有多少个资源就发送多少个请求，浏览器加载外部资源是按需加载的，
+            用则加载，不用则不加载。
+                像上面的练习图片link会首先跟html网页一起加载，而hover和active图片
+            会在鼠标浮动到链接上和点击链接时才加载。这会导致这三种状态切换时，出现
+            闪烁。
+        
+         */
+
+    </style>
+</head>
+<body>
+
+    <a href="javascript:;"></a>
+
+</body>
+</html>
