@@ -1,2 +1,2 @@
 # Learning
-HTML CSS JAVASCRIPT
+FOR frontend
