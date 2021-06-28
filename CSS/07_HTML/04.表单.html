@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        表单：在现实生活中，用于提交的数据表
+        在网页中的表单，用于将用户的本地数据提交到远程的服务器上
+        最常见的就是搜索引擎的搜索框
+        使用form标签 创建表单
+     -->
+    <!-- 
+        form声明一个表单，类比table
+        form必有属性action属性：表单要提交到的服务器的地址 
+    -->
+     <form action="./target.html">
+
+        <!-- 文本框
+            数据要提交到服务器，必须要为元素指定一个name属性。
+        -->
+        用户名：<input type="text" name="username">
+        <br>
+
+        <!-- 密码框
+            数据要提交到服务器，必须要为元素指定一个name属性。
+            用户输入的内容，不会明文显示         
+        -->
+        密码：<input type="password" value="password">
+        <br>
+
+        <!-- 单选按钮
+            数据要提交到服务器，必须要为元素指定一个name属性。
+            多个input radio标签要有相同的name属性，
+            才能实现单选（多选1）。
+            还需要一个value属性，其值作为传递给服务器的数据值。
+            checked属性：设置默认选中
+        -->
+        性别：男<input type="radio" name="sex" value="male">
+        女<input type="radio" name="sex" value="famale" checked>
+        <br>
+
+        <!-- 复选框
+            数据要提交到服务器，必须要为元素指定一个name属性。
+            多个input radio标签要有相同的name属性，
+            才能实现单选。
+            还需要一个value属性，其值作为传递给服务器的数据值。
+            checked属性：设置默认选中
+        -->
+        爱好：足球<input type="checkbox" name="hobby" value="football">
+        篮球<input type="checkbox" name="hobby" value="basketball" checked>
+        网球<input type="checkbox" name="hobby" value="tennis" >
+        <br>
+
+        <!-- 下拉列表
+            secect>option
+            数据要提交到服务器，必须要为元素指定一个name属性。
+            多个input radio标签要有相同的name属性，
+            才能实现单选。
+            还需要一个value属性，其值作为传递给服务器的数据值。
+            selected属性：设置默认选中
+        -->
+        <select name="number">
+            <option value="i">选项1</option>
+            <option value="ii">选项2</option>
+            <option value="iii" selected>选项3</option>
+            <option value="iv">选项4</option>
+            <option value="v">选项5</option>
+        </select>
+        <br>
+
+        <!-- 提交按钮
+            默认显示“提交”,可以通过value属性修改，
+            点击按钮后，页面跳转到form action属性的地址         
+        -->
+        <br>
+        <input type="submit" value="注册">
+    
+    </form>
+</body>
+</html>

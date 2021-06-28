@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="./target.html">
+<!-- name和value成对儿 提交后发送给服务器 -->
+        <input type="text" name="sex" value="famale"> 
+<br><br>
+        <!-- 
+            autocomplete属性 自动补全，浏览器历史中储存的内容
+            on 为开启 off 为关闭
+            可以放到 form 也可方法 表单项中。
+        -->
+        <input type="text" name="username" autocomplete="on">
+<br><br>
+        <!-- 
+            readonly属性 设置只读，无法修改。会提交到服务器
+            disabled属性 设置禁用，不会提交的服务器
+            autofocus属性 设置为焦点。
+        -->
+        <input type="text" name="username" value="hahaha" readonly>
+        <input type="text" name="username" value="hahaha" disabled>
+        <input type="text" name="username" value="hahaha" autofocus>
+
+        <br><br>
+    <!-- 颜色选择框 ie不兼容，不常用-->
+        <input type="color" name="color" >
+        <br><br>
+    <!-- 邮件填写框 提交时会检查属性 不常用，一般用js实现-->
+        <input type="email" name="email" >
+        <br><br>
+    <!-- 提交按钮 -->
+        <input type="submit">
+    <!-- 普通按钮 -->
+         <input type="button" value="按钮">
+    <!-- 重置按钮  -->
+        <input type="reset" value="恢复默认">
+    <br><br>
+    <!-- 
+        三种按钮的另外写法，更常用，更灵活，因为button不是自结束标签
+        可以嵌套其他标签
+    -->
+        <button type="submit">提交</button>
+        <button type="button">按钮</button>
+        <button type="reset">恢复默认</button>
+
+
+
+
+    </form>
+</body>
+</html>
