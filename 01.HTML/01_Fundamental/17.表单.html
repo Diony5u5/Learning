@@ -1,23 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>form</title>
 </head>
 <body>
     <!-- 
-        表单：在现实生活中，用于提交的数据表
-        在网页中的表单，用于将用户的本地数据提交到远程的服务器上
-        最常见的就是搜索引擎的搜索框
+        表单form：在现实生活中，表单是用于提交给某人或某机构的数据表。
+        在网页中使用的表单，用来将用户的本地数据提交到远程的服务器上。
+        最常见的就是搜索引擎的搜索框。
         使用form标签 创建表单
      -->
     <!-- 
         form声明一个表单，类比table
         form必有属性action属性：表单要提交到的服务器的地址 
     -->
-     <form action="./target.html">
+     <form action="./form-target.html">
 
         <!-- 文本框
             数据要提交到服务器，必须要为元素指定一个name属性。
@@ -29,7 +27,7 @@
             数据要提交到服务器，必须要为元素指定一个name属性。
             用户输入的内容，不会明文显示         
         -->
-        密码：<input type="password" value="password">
+        密码：<input type="password">
         <br>
 
         <!-- 单选按钮
