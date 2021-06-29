@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>背景重复</title>
 
     <style>
-        .box1{
+        .box{
             width: 990px;
             height: 32px;
-            /* background-color: red; */
+
             /* 上下无外边距，水平居中 */
             margin: 0 auto;
-            /* background-image: url("./img/07/bg.png");
-            background-repeat: repeat-x; */
+            /* 
+            background-image: url("./img/07/bg.png");
+            background-repeat: repeat-x; 
+            */
+
             /* 简写背景属性 */
+            /* 图片尺寸为1px*32px */
             background: url('./img/07/bg.png') repeat-x;
         }
-
     </style>
-
 
 </head>
 <body>
-    <div class="box1"></div>
+    <div class="box"></div>
 </body>
 </html>

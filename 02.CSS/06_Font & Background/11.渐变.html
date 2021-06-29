@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>渐变</title>
     <style>
 
-        .box1{
+        .box{
             width: 200px;
             height: 200px;
             /* background-color:#bfa; */
@@ -33,15 +31,15 @@
                 repeating-linear-gradient（）可以平铺线性渐变
 
              */
-            /* background-image: linear-gradient(0.5turn, red,yellow,#bfa); */
+            /* background-image: linear-gradient(to right, red,yellow,#bfa); */
             /* background-image: linear-gradient( red 50px,yellow 100px); */
-            background-image: repeating-linear-gradient(to right,red,yellow 50px);
+            background-image: repeating-linear-gradient(270deg,red,yellow 50px);
         }
     </style>
 
 
 </head>
 <body>
-    <div class="box1"></div>
+    <div class="box"></div>
 </body>
 </html>
