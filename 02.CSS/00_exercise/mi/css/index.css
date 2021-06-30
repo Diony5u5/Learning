@@ -352,7 +352,7 @@ li:hover>.app .qrcode{
 
 .nav .show-goods:hover ~ .goods-info,
 .goods-info:hover{
-    /* 在hover时,显示边框和阴影,会导致离开hover时 没有过度效果*/
+    /* 在hover时,显示边框和阴影*/
     height: 228px;
     border-top: 1px solid rgb(224, 224, 224);
     box-shadow: 0 5px 3px rgba(0, 0, 0, .2);
