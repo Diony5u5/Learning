@@ -279,8 +279,44 @@ li:hover>.app .qrcode{
     /* background-color: #bfa; */
 }
 
-.nav-wrapper li{
+.nav > li{
     float: left;
+}
+.all-goods-wrapper{
+    position: relative;
+
+}
+
+/* 设置坐下方导航条的样式 */
+.nav .left-menu{
+    width: 234px;
+    height: 420px;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, .6);
+    position: absolute;
+    left: -128px;
+    z-index: 999;
+    line-height: 1;
+
+}
+
+.nav .left-menu a{
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    color: white;
+    margin-right: 0;
+    padding: 0 30px;
+    font-size: 14px;
+}
+.nav .left-menu a:hover{
+    background-color: #ff6700;
+    color: white;
+}
+
+.nav .left-menu a i{
+    float: right;
+    line-height: 42px;
 }
 
 .nav-wrapper li a{
@@ -367,3 +403,171 @@ li:hover>.app .qrcode{
     border: none;
 }
 
+/* banner */
+.banner{
+    position: relative;
+    height: 460px;
+}
+
+.banner .img-list li{
+    position: absolute;
+}
+
+.banner img{
+    /* 宽度为其父元素的100% */
+    width: 100%;
+    /* 消除图片上下的间距 */
+    vertical-align: top;
+}
+
+/* 设置4个导航点 */
+.pointer{
+    position: absolute;
+    bottom: 26px;
+    right: 34px;
+}
+
+.pointer a{
+    float: left;
+    width: 6px;
+    height: 6px;
+    margin-left: 8px;
+    background-color: rgba(0, 0, 0, .3);
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 50% ;
+}
+.pointer a:hover,
+.pointer a.active{
+    background-color: rgba(255, 255, 255, .2);
+    border: 2px solid rgba(0, 0, 0, .3);
+}
+
+/* 设置左右箭头 */
+
+.prev-next a{
+    width: 41px;
+    height: 69px;
+    background-image:url(../img/icon-slides.png);
+    position: absolute;
+    /* 垂直居中 一起设置 */
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+
+.prev-next .prev{
+    left: 234px;
+    background-position: -84px 0;
+}
+.prev-next .prev:hover{
+    background-position: 0 0;
+}
+.prev-next .next{
+    right: 0;
+    background-position: -125px 0;
+}
+.prev-next .next:hover{
+
+    background-position: -42px 0;
+}
+
+/* 设置工具条容器样式 */
+.back-top{
+    width: 26px;
+    height: 206px;
+    background-color: #bfa;
+    /* 开启固定定位 ,相对于视口,视口不固定*/
+    position: fixed;
+    bottom: 40px;
+    /* 固定在视口中间偏左 */
+    right: 50%;
+    /* 自己的宽度+w的一半 26+613 */
+    margin-right: -639px;
+
+    /* 
+        布局的等式
+        left + margin-left + width + margin-right + right = 视口
+    */
+}
+
+/* 设置广告区 */
+.ad{
+    /* background-color: #bfa; */
+    height: 170px;
+    margin-top: 14px;
+}
+
+.ad .shortcut,
+.ad .imgs,
+.ad li{
+    float: left;
+}
+
+.ad .shortcut{
+    width: 234px;
+    height: 170px;
+    background-color: #5f5750;
+    margin-right: 14px;
+}
+
+ .ad .shortcut li{
+    position: relative;
+}
+.ad .shortcut li::before{
+    content: '';
+    position: absolute;
+    width: 64px;
+    height: 1px;
+    background-color: #665e57;
+    left: 0;
+    right: 0;
+    top: 0x;
+    margin: 0 auto;
+}
+.ad .shortcut li::after{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 70px;
+    background-color: #665e57;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+} 
+
+
+
+.ad .shortcut a{
+    display: block;
+    width: 78px;
+    height: 84px;
+    color: #cfccca;
+    text-align: center;
+    font-size: 12px;
+    overflow: hidden;
+}
+.ad .shortcut a:hover{
+    color: #fff;
+}
+
+
+.ad .shortcut i{
+    display: block;
+    margin-top: 24px;
+    margin-bottom: 6px;
+    font-size: 20px;
+}
+
+.ad .imgs li{
+    width: 316px;
+    margin-right: 15px;
+}
+.ad .imgs li:last-child{
+    margin: 0;
+}
+
+.ad .imgs img{
+    width: 100%;
+    vertical-align: top;
+}
