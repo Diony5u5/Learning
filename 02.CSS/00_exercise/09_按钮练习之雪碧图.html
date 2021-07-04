@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <title>动态按钮</title>
 
     <style>
-        a:link{
+        a:link {
             display: block;
             width: 93px;
             height: 29px;
             background-image: url('./img/09/btn.png');
         }
 
-        a:hover{
+        a:hover {
             /* 水平向左移动93像素 */
             background-position: -93px 0;
         }
 
-        a:active{
+        a:active {
             /* 水平向左移动186像素 */
             background-position: -186px 0;
         }
+
         /* 
             解决图片的闪烁问题：
                 将多个小图片合成为一个大图片，通过调整大图片的位置来
@@ -41,20 +43,22 @@
         
          */
 
-         .box1{
-             width: 128px;
-             height: 46px;
-             background-image: url('./img/09/amazon-sprite_.png');
-             background-position: 0 0;
-         }
-         .box2{
-             width: 42px;
-             height: 30px;
-             background-image: url('./img/09/amazon-sprite_.png');
-             background-position: -58px -338px;
-         }
+        .box1 {
+            width: 128px;
+            height: 46px;
+            background-image: url('./img/09/amazon-sprite_.png');
+            background-position: 0 0;
+        }
+
+        .box2 {
+            width: 42px;
+            height: 30px;
+            background-image: url('./img/09/amazon-sprite_.png');
+            background-position: -58px -338px;
+        }
     </style>
 </head>
+
 <body>
 
     <a href="javascript:;"></a>
@@ -64,4 +68,5 @@
     <div class="box2"></div>
 
 </body>
+
 </html>
