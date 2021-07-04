@@ -1,0 +1,23 @@
+//import可以将其他less文件引入到当前的less中，
+// 方便进行less的模块化管理 例如：变量less,布局less,mixinless,总less
+@import url(./syntax2.less);
+
+.box1{
+    //在less中所有的数值都可以直接进行加减乘除运算
+    width: 100px * 2;
+    height: 400 / 2;
+    background-color: #bfa;
+}
+
+
+//浏览器只会处理css,调试时,对应样式的位置时css中的位置
+//为了能对应到less中的代码，需要在vscode中的setting.json中
+//对easy-less插件进行配置
+
+/*
+"less.compile": {
+    "compress": true, // true => remove surplus whitespace源码压缩
+    "sourceMap": true, // true => generate source maps (.css.map files)映射地图
+    "out": true // false => DON'T output .css files (overridable per-file, see below)是否生成css
+}
+*/
