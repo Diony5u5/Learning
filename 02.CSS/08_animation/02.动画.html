@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box1{
+            width: 800px;
+            height: 800px;
+            margin: 0 auto;
+            background-color: silver;
+            overflow: hidden;
+        }
+
+
+        .box2{
+            background-color: #bfa;
+            width: 100px;
+            height: 100px;
+            margin-top: 100px;
+            margin-left: 0;
+            /* 设置box2的动画 */
+
+            /* animation-name:要对当前元素生效的关键帧的名字：@keyframes 名字*/
+            animation-name: test;
+
+            /* animation-duration: 动画的持续时间 */
+            animation-duration: 2s;
+
+            /* 动画的延时 */
+            animation-delay: 1s;
+
+            /* 动画的时序函数 与过度相似 */
+            animation-timing-function: linear;
+
+            /* 动画的的执行次数 可选值:数字 或 infinite(无限循环) */
+            animation-iteration-count: 2;
+
+            /* 
+                动画的运行方向
+                    可选值: normal(默认) :从from到to ,每次都如此.
+                            reverse     :从to到from ,每次都如此.
+                            alternate   :从from到to,再从to到from. 这算2次
+                            alternate-reverse: 从to到from,再从from到to.
+             */
+            animation-direction: alternate;
+
+            /* 动画的执行状态
+                    可选值: running(默认):运行
+                            paused      :暂停到当前位置 ,可以配合伪类hover等使用.
+             */
+            animation-play-state: running;
+
+            /* 动画的填充模式
+                    可选值:none(默认) :动画执行完毕 元素回到原来的位置(不是动画的开始位置)
+                          forwards   :动画执行完毕 元素会停止在动画的结束位置
+                          backwards  :动画延时等待时 元素处于动画开始位置
+                          both       :结合额forwards+backwards
+             */
+            animation-fill-mode: none;
+
+            /* 动画的简写属性 与过度类似 */
+            /* animation: test 2s 2 1s alternate; */
+        }
+
+       
+
+        /* 
+        动画
+            动画和过渡类似，都是可以实现一些动态的效果。
+                不同的是过渡需要在某个属性发生变化时才会触发
+                动画可以自动触发动态效果
+
+                设置动画效果，必须先设置一个关键帧，关键帧设置了动画执行的每一个步骤
+         */
+         @keyframes test{
+             /* from表示动画的开始位置 也可以使用 0% */
+             from{
+                 margin-left: 0;
+                 background-color: red;
+             }
+            /* to表示动画的结束位置 也可以使用 100% */
+            to{
+                margin-left: 700px;
+                background-color: yellow;
+            }
+         }
+    </style>
+
+</head>
+<body>
+
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+    
+</body>
+</html>
