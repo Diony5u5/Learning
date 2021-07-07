@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            border: 1px solid black;
+            /* background-color: silver; */
+        }
+        html{
+            /* 设置当前网页的视距为800px，人眼距离网页的距离 */
+            perspective: 800px;
+        }
+        .box1{
+            width: 360px;
+            height: 360px;
+            background-color: #bfa;
+            margin:200px auto;
+
+            transition: all 2s;
+        }
+
+        /*  */
+        body:hover .box1{
+            /* 
+            通过旋转可以使元素沿着x、y、z轴旋转指定的角度
+                rotateX() 需要开启视距
+                rotateY() 需要开启视距
+                rotateZ() 不需要开启视距
+            */
+
+            /* transform: rotateZ(.5turn); */
+            /* transform: rotateY(.1turn) translateZ(300px); */
+            transform: translateZ(300px) rotateY(1turn);
+            /* transform: rotateY(180deg); */
+
+            /* 设置元素背面时候显示 visible、hidden*/
+            /* backface-visibility: hidden; */
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"><img src="./img/WWF.webp" alt=""></div>
+</body>
+</html>
