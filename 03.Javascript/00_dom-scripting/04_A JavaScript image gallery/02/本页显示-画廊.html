@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <script type="text/javascript" src="./js/showpic.js"></script>
+</head>
+
+<body>
+    <!-- 
+        这是一个点击超链接后，会跳转到图片页的画廊
+        返回到选择页面需要从图片页后退到选择页（本页面）
+    -->
+    <h1>Snapshots</h1>
+
+    <ul>
+        <li><a href="./img/bigben.jpg" title="The famous clock" onclick="showpic(this);return false;">Big Ben</a></li>
+        <li><a href="./img/coffee.jpg" title="A cup of black coffee">Coffee</a></li>
+        <li><a href="./img/fireworks.jpg" title="A fireworks display">Fireworks</a></li>
+        <li><a href="./img/rose.jpg" title="A red, red rose">Rose</a></li>
+    </ul>
+
+    <img id="placeholder" src="./img/placeholder.gif" alt="my image gallery" />
+</body>
+
+</html>
