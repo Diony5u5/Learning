@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+/*
+        js中所有的数值都是Number类型
+            包括 整数 和 浮点数（小数）
+
+        JS中的最大值 
+        Number.MAX_VALUE  ：  1.7976931348623157e+308
+        如果数值大于Number.MAX_VALUE,则是字面量为Infinity的数值;
+        Number.MAX_VALUE+1000000000000000还是1.7976931348623157e+308；
+        但是Number.MAX_VALUE * Number.MAX_VALUE 则为Infinity。
+
+        Infinity 表示正无穷
+        -Infinity 表示负无穷
+        typeof查看Infinity会返回number
+
+        JS中最小的正值
+        Number.MIN_VALUE  ：  5e-324
+
+        NaN 是一个特殊的数字，表示非数值
+        typeof查看NaN会返回number
+
+
+*/ 
+        // 数值123.1
+        var a = 123.1;
+        // 字符串123.1
+        var b = "123.1";
+
+        // 无法区分数据类型
+        console.log(a);//123.1
+        console.log(b);//123.1
+
+        // 使用typeof运算符 查看变量的数据类型
+        console.log(typeof a); //number
+        console.log(typeof b); //string
+
+        // Number.MAX_VALUE
+        var c = Number.MAX_VALUE;
+        var c2 = c * c;
+        console.log(c); // 1.7976931348623157e+308
+        console.log(c2); //Infinity
+        console.log(typeof c2);//number
+
+        //非数值四则运算
+        var e = "aaa" * "aaa";
+        console.log(e); //NaN
+        console.log(typeof e); //number
+
+
+        var f = "5" * "8"; //强制类型转换
+        console.log(f); //40
+        console.log(typeof f); //number
+
+        var d = "2" * "abc";
+        console.log(d); //NaN
+
+        // 整数运算结果 基本可以保证精确
+        var g = 84535840 - 84213247;
+        console.log(g); //322593
+        // 浮点数运算结果 不一定得到精确结果。不要用JS进行精确度要求高的运算，要算的话，可以在服务器中运算。
+        var h = 0.1 + 0.2; 
+        console.log(h); //0.30000000000000004
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

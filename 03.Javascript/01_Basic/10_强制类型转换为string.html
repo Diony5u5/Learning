@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    /*
+        强制类型转换
+            -将一个数据类型强制转换为其它数据类型
+            -主要指转换为 string number boolean
+    */ 
+
+    /*
+        转换成string
+          方法一：  
+            -调用被转换数据类型的toString()方法
+            -null和undefined没有toString()方法，会报错
+          方法二：
+            -调用String()函数，
+            -可以将null和undefined转成字符串。 
+            -对于Number和Boolean,实际上还是调用toString()方法
+            -对于undefined和null,不调用toString()方法，而是直接转为字符串"undefined" 和"null"
+    */
+        var a = 123;
+        console.log(typeof a);//number
+        // 调用a的toString()方法
+        a = a.toString();
+        console.log(typeof a);//string
+
+        var b = true;
+        console.log(typeof b);//boolean
+        // 调用b的toString()方法
+        b = b.toString();
+        console.log(typeof b);//string
+
+        var c;//undefined
+        console.log(typeof c);//undefined
+        // 调用c的toString()方法
+        //c = c.toString(); //错误
+
+
+        var d = 123;
+        // 调用String()函数
+        d = String(d);
+        console.log(typeof d);//string
+
+        var e; //未赋值 是undefined类型
+        // 调用String()函数
+        e = String(e);
+        console.log(typeof e);//string
+
+        var f = null ; //
+        // 调用String()函数
+        f = String(f);
+        console.log(typeof f);//string
+
+        var g = Infinity;
+        g = String(g);
+        console.log(g);//Infinity
+        console.log(typeof g);//string        
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

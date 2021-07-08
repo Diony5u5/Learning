@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+    /*
+    转换成number
+        方法一：
+            使用Number()函数 ，对像200px的这种字符串不好用
+                string->number  
+                    1.纯数字字符串 直接转成 数字
+                    2.非纯数字字符串 转成 NaN
+                    3.空字符串或者空格字符串 转成 0
+                boolean->number
+                    1.true 转 1
+                    2.false 转 0
+                null 转成 0
+                undefined 转成 NaN
+        方法二：
+            专门用于string->number（对于非string，会先转成string 在转成number）
+            使用
+                函数parseInt() 转成整数 ，将字符串中的有效整数内容转出
+                函数parseFloat() 转成浮点数，将字符串中有效的小数内容转出。
+                要以数字开头。
+
+    */
+   
+    var a = "123";
+    a = Number(a);
+    console.log(a);//123
+    console.log(typeof a);
+
+    var b = "1a3";
+    b = Number(b);
+    console.log(b);//NaN
+    console.log(typeof b);
+
+    var c = "";
+    c = Number(c);
+    console.log(c);//0
+    console.log(typeof c);
+
+    var d = true;   
+    d = Number(d);
+    console.log(d);//1
+    console.log(typeof d);
+
+    var e = false;   
+    e = Number(e);
+    console.log(e);//0
+    console.log(typeof e);
+    
+    var f = "123px";
+    f = parseInt(f);
+    console.log(f);//123
+    console.log(typeof f);//number
+
+    // 利用parseInt对浮点数进行取整操作
+    var flo = 3.14159;
+    i = parseInt(flo);
+    console.log(i); //3
+    console.log(typeof i);  //number
+
+
+
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
