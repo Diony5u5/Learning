@@ -1,1 +1,1 @@
-alert("hahaha");
+alert("我是外部JS代码。");
