@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+        16进制以 0x开头
+         8进制以 0或0o开头
+         2进制以 0b开头，浏览器兼容性不好。
+        */ 
+
+        var a = 0xff; //16进制
+        console.log(a); //255
+
+        var b = 070;//8进制
+        console.log(b);//56
+
+        var c = 0o70;//8进制
+        console.log(c);
+
+        var d = 0b11;//2进制
+        console.log(d);
+
+        var e = "070"; //这种字符串 有可能被当成8进制解析，
+        //parseInt()可以有2个参数，第一个是要被转换的变量或字面量，第二个参数是按照什么进制转换
+        e = parseInt(e); //70
+        // e = parseInt(e,10); //70
+        // e = parseInt(e,8);  //56
+        // e = parseInt(e,16); //112
+
+        console.log(typeof e);
+        console.log(e);    
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
