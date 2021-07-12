@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 外部js文件，通过script标签引入，但像这种带src属性的script标签中，不能编写js代码-->
+    <script src="./js/test.js"></script>
+
+    <!-- 将js代码写在head标签中的script标签中 -->
+    <script>
+        alert('我是内部JS代码。');
+    </script>
+
+</head>
+<body>
+
+    <!-- 虽然可以写在其他html标签的属性中，但是这样产生结构(html)与行为(javascript)耦合的问题，不方便维护，不推荐使用 -->
+
+    <!-- 可以将JS代码编写到标签的onclick属性中 -->
+    <!-- 因为js代码编写到了onclick属性中，onclick属性值已经用双引号了，所以alert()中的内容要用单引号 -->
+    <button onclick="alert('我在onclick属性中');alert('我也在onclick属性中');">点一下按钮</button>
+
+    <!-- 可以将js代码写在超链接的href属性中，当点击超链接时JS代码会执行 -->
+    <a href="JavaScript:alert('我在href属性中');alert('我也在href属性中');">点一下链接</a>
+
+</body>
+</html>
