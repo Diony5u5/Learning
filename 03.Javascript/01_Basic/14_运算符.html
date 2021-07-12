@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            运算符 也叫 操作符
+                通过运算符可以对一个或多个值进行运算
+                typeof：获得一个值的数据类型，并以字符串的形式返回。
+
+                算数运算符
+                    当对非Number类型的值进行运算时，会将这些值转换成Number后再进行运算(除了含有字符串的加法)
+                    任何值和NaN进行运算，结果都是NaN。
+                    +
+                        对两个数值进行求和运算，将结果返回。
+                        两个字符串求和，拼接字符串。
+                        任何其他值与字符串做加法运算，都会先转换成字符串，再进行拼串。
+
+        */
+       var a = 123;
+       aType = typeof a;
+        
+       console.log(aType); //number
+       console.log(typeof a) //number
+       console.log(typeof aType); //string
+
+       var b = 321;
+
+       var result = a + b;
+       console.log(result); //444
+
+       var bool = true + false; //1
+       console.log(bool);
+
+       var D = 2 + null; //2
+
+        var str = "你好" + " 周杰伦" + "88"; 
+        var shi = "锄禾日当午，" + 
+                  "汗滴禾下土，" +
+                  "谁知盘中餐，" +
+                  "粒粒皆辛苦。";
+        console.log(str); //你好 周杰伦88
+        console.log(shi); //锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。
+
+        var otherString = 123 + "44";
+        console.log(otherString); //12344
+
+        // 利用 任何其他值与字符串做加法运算，都会先转换成字符串，再进行拼串。
+            // 可以实现一种转成字符串的方法。隐式类型转换，本质也是调用String()。
+        let toString = 322 + ""; //需要转化的其他类型的数据 加上一个 空字符串。
+        console.log(typeof toString); //string
+        console.log(toString);  //322
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -13,22 +13,21 @@
             字符串转布尔值：空串是false;
             null和undefined 是false
     */ 
-
     var a;
-    a = 123;
-    a = -123;
-    a = 0;
-    a = "hello";
-    a = "false"
-    a = {};
+    a = 123; //true
+    a = 0; //false
+    a = NaN; //false
+
+    a = "hello"; //true
+    a = ""; //false
+    a = " "; //true
+    a = "false" //true
+
+    a = {}; //true
+    a = null; //false
     a = Boolean(a);
     console.log(typeof a);
     console.log(a);
-
-
-
-
-
 
 </script>
 
