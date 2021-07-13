@@ -9,19 +9,19 @@
     /*
         强制类型转换
             -将一个数据类型强制转换为其它数据类型
-            -主要指转换为 string number boolean
+            -主要指 转换为 string、number、boolean
     */ 
 
     /*
         转换成string
           方法一：  
             -调用被转换数据类型的toString()方法
-            -null和undefined没有toString()方法，会报错
+              -null和undefined没有toString()方法，会报错
           方法二：
             -调用String()函数，
-            -可以将null和undefined转成字符串。 
-            -对于Number和Boolean,实际上还是调用toString()方法
-            -对于undefined和null,不调用toString()方法，而是直接转为字符串"undefined" 和"null"
+              -可以将null和undefined转成字符串。不调用toString()方法，而是直接转为字符串"undefined" 和"null"
+              -对于Number和Boolean,实际上还是调用toString()方法
+
     */
         var a = 123;
         console.log(typeof a);//number
@@ -37,7 +37,7 @@
 
         var c;//undefined
         console.log(typeof c);//undefined
-        // 调用c的toString()方法
+        // undefined没有toString()方法
         //c = c.toString(); //错误
 
 
@@ -60,8 +60,6 @@
         g = String(g);
         console.log(g);//Infinity
         console.log(typeof g);//string        
-
-
 
     </script>
 </head>

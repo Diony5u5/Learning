@@ -27,8 +27,8 @@
 
         var e = "070"; //这种字符串 有可能被当成8进制解析，
         //parseInt()可以有2个参数，第一个是要被转换的变量或字面量，第二个参数是按照什么进制转换
-        e = parseInt(e); //70
-        // e = parseInt(e,10); //70
+        // e = parseInt(e); //70
+        e = parseInt(e,10); //70
         // e = parseInt(e,8);  //56
         // e = parseInt(e,16); //112
 
