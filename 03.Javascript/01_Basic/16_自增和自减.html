@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+/*
+        自增 ++ （）
+            -通过自增可以使变量在自身基础之上立即增加1
+            -自增分为两种：++i 和 i++
+                无论++i 还是i++，都会立即使原变量i的值自增1 (副作用：隐式赋值)
+                但是，i代表变量的值、i++或++i是一个表达式也有自己代表的值
+                i++的值是自增前的原值
+                ++i的值是自增后的新值
+
+        自减 -- 
+            与自增同理
+
+
+
+
+
+
+*/ 
+
+        var c = 10; //c的值是10
+        c++;   //c的值是11，c++的值是10
+        console.log(c); //c=11。
+        console.log(c++); //c++的值是自增前c=11。
+
+        var dd = 20;
+         dd = dd++ + ++dd + dd; //dd =20 + 22 + 22 
+        console.log(dd); //64
+
+        var ee = 20;
+        ee = ee++;// ee++首先把ee的值变成了21，ee++自己的值还是20，然后又把ee++自己的值22赋值给了ee。
+        console.log(ee);//20
+
+
+
+        var n1 = 10 ,n2 = 20;
+        var n = n1++;  //n = 10 ,n1 = 11
+
+        console.log("n=" + n);//n=10
+        console.log("n1=" +n1);//n1=11
+
+        n = ++n1;//n = 12,n1 = 12
+        console.log("n=" + n);//n=12
+        console.log("n1=" +n1);//n1=12
+
+        n = n2--;//n=20 n2 = 19
+        console.log("n=" + n);//n=20
+        console.log("n2=" +n2);//n2=19
+
+        n = --n2; //n=18 n2=18
+        console.log("n=" + n);//n=18
+        console.log("n2=" +n2);//n2=18
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

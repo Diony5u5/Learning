@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+/*
+        一元运算符，只需要一个操作数
+        + 正号
+            正号不会对数字产生影响
+            可以用正号+ 把非Number类型数据，转化成Number。原理同Number()函数。
+        - 负号
+            负号可以对数字进行取反
+            对于非Number值，先转化成Number 再进行取反。
+            
+
+*/ 
+
+        var a = 123;
+        a = +a;
+        console.log(a); //123
+
+        var b = 123;
+        b = -b;
+        console.log(b); //-123
+
+        var c = true;
+        c = -c;
+        console.log(c); //-1
+
+        var d = 1 + "2" + 3;
+        console.log("d的值是"+d+" 数据类型是" +typeof d); //d的值是123 数据类型是string
+
+        var d = 1 + +"2" + 3;
+        console.log("d = "+d+" " + typeof d); //d = 6 number
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

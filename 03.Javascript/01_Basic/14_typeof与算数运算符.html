@@ -11,13 +11,22 @@
                 通过运算符可以对一个或多个值进行运算
                 typeof：获得一个值的数据类型，并以字符串的形式返回。
 
-                算数运算符
-                    当对非Number类型的值进行运算时，会将这些值转换成Number后再进行运算(除了含有字符串的加法)
+                算数运算符 + - * / %
+                    当对非Number类型的值进行运算时，会将这些值转换成Number后，再进行运算(除了含有字符串的加法)
                     任何值和NaN进行运算，结果都是NaN。
                     +
                         对两个数值进行求和运算，将结果返回。
                         两个字符串求和，拼接字符串。
-                        任何其他值与字符串做加法运算，都会先转换成字符串，再进行拼串。
+                        任何其他值与字符串做加法运算，都会先转换成字符串，再进行拼接。
+                    
+                    - 
+                        减法
+                    *
+                        乘法
+                    /
+                        除法
+                    %
+                        取模（取余数）
 
         */
        var a = 123;
@@ -35,7 +44,8 @@
        var bool = true + false; //1
        console.log(bool);
 
-       var D = 2 + null; //2
+       var d = 2 + null; //2
+       var c = 2 + NaN; //NaN
 
         var str = "你好" + " 周杰伦" + "88"; 
         var shi = "锄禾日当午，" + 
@@ -53,6 +63,25 @@
         let toString = 322 + ""; //需要转化的其他类型的数据 加上一个 空字符串。
         console.log(typeof toString); //string
         console.log(toString);  //322
+        console.log("toString = "+ toString); //toString = 322
+
+        var e = 1 + 3 + "4"; // 4+"4" = 44
+        var e = "1" + 3 + 4; // 134
+
+        // 任何值做 减- 乘* 除/ 运算时，都会先转换成Number类型，再进行运算。
+            //可以通过 把一个值 -0、*1、/1 来实现转化成数值
+        var f = "123";
+        // f = Number(f);
+        f = f - 0;
+        f = f * 1;
+        f = f / 1;
+        console.log(typeof f);//number
+        console.log(f);//123
+
+        var g = 9 % 4; //9除4得2 余 1
+        console.log(g);//1
+
+
     </script>
 </head>
 <body>
