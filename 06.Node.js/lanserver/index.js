@@ -63,4 +63,4 @@ http.createServer(function (request, response) {
 }).listen(port);
  
 // 终端打印运行信息
-console.log('Server running at port:' + port);
+console.log('服务器运行在端口:' + port);
