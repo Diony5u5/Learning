@@ -16,7 +16,7 @@ http.createServer(function (request, response) {
     var realPath = url.parse(request.url).pathname;
  
     //默认访问根目录下的index.html
-    if (realPath.charAt(realPath.length - 1) == "/") {
+    if (realPath.charAt(realPath.length - 1) == "/"){
         realPath += index;
     }
  
@@ -35,7 +35,6 @@ http.createServer(function (request, response) {
             response.writeHead(404, {
                 'Content-Type': 'text/plain'
             });
- 
             response.write("This request URL " + realPath + " was not found on this server.");
             response.end();
         } else {
