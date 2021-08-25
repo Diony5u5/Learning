@@ -30,7 +30,21 @@
             console.log(`${key}:${value}`); //x:1 , y：2
         }
 
+        console.log(String.raw `\u00a9`);
 
+
+        let ab = {a:1,b:2};
+        let cd = {c:1,d:2};
+        let result = ab && cd; //两个对象 与
+        console.log(result); //{c:1,d:2}
+
+        let found = true;
+        console.log(ab&&found);//true
+
+        let lost = false;
+        console.log(lost&&fdafsd);//false
+
+        console.log(found||fdafsd); //true
 
     </script>
 </head>
