@@ -26,12 +26,14 @@
             console.log(value); //1,2,3,4,5,6,7,8
         }
         // 遍历整个对象。Object.entries()方法，返回一个给定对象自身可枚举属性的键值对数组
-        for(const [key,value] of Object.entries(object)){
+        for(const [key,value] of Object.entries(object)){ //object.entries() 不能用，object不可迭代
             console.log(`${key}:${value}`); //x:1 , y：2
         }
 
         console.log(String.raw `\u00a9`);
 
+        console.log(typeof Object.entries(object)); //Object
+        console.log(Object.entries(object)); //
 
         let ab = {a:1,b:2};
         let cd = {c:1,d:2};
@@ -46,6 +48,11 @@
 
         console.log(found||fdafsd); //true
 
+        //稀疏数组的length
+        let arr = [0,1,2,3,];
+        console.log(arr.length); //4
+        let arr2 = [0,1,,2,3];
+        console.log(arr2.length); //5
     </script>
 </head>
 <body>
