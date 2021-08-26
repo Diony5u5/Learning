@@ -30,49 +30,50 @@
         console.log(strAsArr);//["a", "s", "d", "f", "a", "s", "d", "f", "f", "d", "s"]
         console.log(strNo);//["a", "s", "d", "f"]
 
-        //Array()构造函数
-        let arr2 = new Array(); //创建一个空数组.[]
-        let arrlen = new Array(10) //创建一个长度为10的数组。[,,,,,,,,,,],传一个参数，是length
-        let arr3 = [,,,,,,,,,,] //是个连续的逗号，代表length为10的数组
-        let arrcan = new Array(5,4,3,2,1,"testing,testing"); //[5, 4, 3, 2, 1, "testing,testing"],串多个参数，是多个元素。无法用此方法创建只有一个元素的数组。
+//创建数组
+    //一、Array()构造函数 
+        let arr2 = new Array(); //创建一个空数组.[]，length为0。
+        let arrlen = new Array(10); //创建一个长度为10的数组。传一个Number类型的参数，就是设置length。无法用此方法创建只有一个Number类型元素的数组。
+        let arr3 = [,,]; //2个连续的逗号，代表length为2的数组。
+        let arrcan = new Array(5,4,3,2,1,"testing,testing"); //传几个参数，就是几个元素。
 
-        console.log(arr2);
+        console.log(arr2); //[]
+        console.log(arr2.length);//0
         console.log(arrlen);
         console.log(arr3);
-        console.log(arrcan);
+        console.log(arrcan); //[5, 4, 3, 2, 1, "testing,testing"]
 
-        //Array.of()
-        let arrof = Array.of(99); //[99]
-        let arrof2 = Array.of(99,100,"hello");
+    //二、Array.of()
+        let arrof = Array.of(99); 
+        let arrof2 = Array.of(99,100,"hello"); 
 
-        console.log(arrof);
-        console.log(arrof2);
+        console.log(arrof); //[99]
+        console.log(arrof2); //[99, 100, "hello"]
 
-        //Array.from() 浅拷贝
+    //三、Array.from() 浅拷贝
         let arrsrc = [1,2,3,4,5];
-        let arrCopy1 = Array.from(arrsrc); //[1,2,3,4,5]
-        let arrCopy2 = [...arrsrc]; //[1,2,3,4,5]
+        let arrCopy1 = Array.from(arrsrc); 
+        let arrCopy2 = [...arrsrc]; 
 
-        console.log(arrCopy1);
-        console.log(arrCopy2);
+        console.log(arrCopy1); //[1,2,3,4,5]
+        console.log(arrCopy2); //[1,2,3,4,5]
 
                 //字符串（类数组） 转成 数组（真数组）
         let arrlike = "hk.whygj.xyz";
-        let realarr = Array.from(arrlike); //["h", "k", ".", "w", "h", "y", "g", "j", ".", "x", "y", "z"]
-        console.log(realarr);
+        let realarr = Array.from(arrlike); 
+        console.log(realarr); //["h", "k", ".", "w", "h", "y", "g", "j", ".", "x", "y", "z"]
 
         let nInt = [1,2,3,4,5];
-        let nIntplus1 = Array.from(nInt,x => x+1); //[2, 3, 4, 5, 6]
-        let nIntplus2 = Array.from(nInt,function(x){return x+1}); //[2, 3, 4, 5, 6]
-
-        console.log(nInt);        
-        console.log(nIntplus1);
-        console.log(nIntplus2);
+        let nIntplus1 = Array.from(nInt,x => x+1); 
+        let nIntplus2 = Array.from(nInt,function(x){return x+1}); 
+      
+        console.log(nIntplus1); //[2, 3, 4, 5, 6]
+        console.log(nIntplus2); //[2, 3, 4, 5, 6]
 
         //数组读写
         let aa = ["a",2,3,"b"];
-        aa[aa[2]] = aa[0]; //["a", 2, 3, "a"]
-        console.log(aa);
+        aa[aa[2]] = aa[0]; 
+        console.log(aa); //["a", 2, 3, "a"]
 
 
 
