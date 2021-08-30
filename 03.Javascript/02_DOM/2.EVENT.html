@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 此方法绑定事件，结构与行为发生耦合 -->
+    <!-- <button id = "btn" onclick ="alert('点我干啥')">别点我</button> -->
+
+    <button id = "btn">别点我</button>
+
+    <script>
+
+        let btn = document.getElementsByTagName("button");
+        // 给buttton元素绑定onclick事件响应函数 ,含有Elements的方法返回的是数组，文档中只有一个button,索引为0。
+        btn[0].onclick = function(){
+            alert("点我干啥");
+        };
+
+        let btn = document.getElementById("btn");
+        // 给buttton元素绑定事件响应函数        
+        btn.onclick = function(){
+            alert("点我干啥");
+        };
+
+
+    </script>
+</body>
+</html>
