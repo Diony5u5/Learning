@@ -6,14 +6,14 @@
 		<link rel="stylesheet" type="text/css" href="css/css.css" />
 		<script>
             window.onload = function(){
-				//查找#bj节点
+			//查找#bj节点
                 let btn01 = document.getElementById("btn01");
                 btn01.onclick = function(){
                     let bj = document.getElementById("bj");
                     alert(bj.innerHTML);
                 };
 
-				//查找所有li节点
+			//查找所有li节点
                 let btn02 = document.getElementById("btn02");
                 btn02.onclick = function(){
                     let lis = document.getElementsByTagName("li");
@@ -22,7 +22,7 @@
                     };
                 };
 
-				//查找name=gender的所有节点
+			//查找name=gender的所有节点
                 let btn03 = document.getElementById("btn03");
                 btn03.onclick = function(){
                     let gender = document.getElementsByName("gender");
@@ -30,18 +30,85 @@
                         alert(gender[i].value);
                         //class属性要用className。
                         //alert(gender[i].className);
+                    };
+                };
 
+			//查找#city下所有li节点
+                let btn04 = document.getElementById("btn04");
+                btn04.onclick = function(){
+                    let city = document.getElementById("city");
+                    let citylis= city.getElementsByTagName("li");
+                    for(let i = 0 ; i < citylis.length ; i++){
+                        alert(citylis[i].innerHTML);
+                    };
+                };
+
+			//返回#city的所有子节点(childNodes)
+                let btn05 = document.getElementById("btn05");
+                btn05.onclick = function(){
+                    let city = document.getElementById("city");
+                    // let cityNodes = city.childNodes; //【*】childNodes属性返回所有子节点。包括空白（换行）等的文本节点。
+                    // for(let i=0 ; i<cityNodes.length; i++){
+                    //     alert(cityNodes[i]);
+                    // }
+                    let cityElements = city.children;  //【*】children属性返回所有元素（标签）节点。
+                    for(let i=0 ; i<cityElements.length; i++){
+                        alert(cityElements[i]);
                     }
                 }
-				//查找#city下所有li节点
-				//返回#city的所有子节点
-				//返回#phone的第一个子节点
-				//返回#bj的父节点
-				//返回#android的前一个兄弟节点
-				//读取#username的value属性值
-				//设置#username的value属性值
-				//返回#bj的文本值
 
+			//返回#phone的第一个子节点
+                let btn06 = document.getElementById("btn06");
+                btn06.onclick = function(){
+                    let phone = document.getElementById("phone");
+
+                    let phoneFirstElementChild = phone.firstElementChild;
+                    alert(phoneFirstElementChild.innerHTML); //【*】firstElementChild属性返回第一个子元素（标签）节点。IE8不支持。
+
+                    let phoneFirst = phone.firstChild; //【*】firstChild属性返回第一个子节点。包括空白（换行）等的文本节点。
+                    alert(phoneFirst.innerHTML);
+                }
+
+        //创建一个函数用来绑定按键事件
+                function myClick(btnStr,fun){
+                    let btn = document.getElementById(btnStr);
+                    btn.onclick = fun;
+                }
+            //返回#bj的父节点
+                myClick("btn07",function(){
+                    let bj = document.getElementById("bj");
+                    let bjp = bj.parentNode; //父节点，只有一个
+                    alert(bjp.innerText); //没有标签的innerHTML
+                    alert(bjp.innerHTML); 
+
+                })
+			//返回#android的前一个兄弟节点
+                myClick("btn08",function(){
+                    let android = document.getElementById("android");
+                    let androidSl = android.previousSibling; //前一个兄弟节点
+                    let androidESl = android.previousElementSibling; //前一个兄弟元素,IE8不支持。
+
+                    alert(androidSl.innerText);
+                    alert(androidESl.innerHTML);
+                })
+			//读取#username的value属性值
+                myClick("btn09",function(){
+                    let username = document.getElementById("username");
+                    alert(username.value);
+                })
+			//设置#username的value属性值
+                myClick("btn10",function(){
+                    let username = document.getElementById("username");
+                    username.value = "我是新的value值";
+                })
+			//返回#bj的文本值
+                myClick("btn11",function(){
+                    let bj = document.getElementById("bj");
+                    alert(bj.innerHTML);
+                    alert(bj.innerText);
+                    alert(bj.firstChild.nodeValue); //文本节点的值为nodeValue。
+
+                })
             }
 				
 			
