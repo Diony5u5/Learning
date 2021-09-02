@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box1">
+        <div></div>
+    </div>
+    <script>
+        let $body = document.body;
+        console.log($body);
+
+        let $html = document.documentElement;
+        console.log($html);
+
+        let $all = document.all;
+        console.log($all);
+
+        let $sel = document.querySelector("div"); //只查1个，返回第一个匹配
+        console.log($sel);
+
+        let $sel = document.querySelectorAll("div"); //查所有，返回类数组
+        console.log($sel);
+    </script>
+</body>
+</html>
