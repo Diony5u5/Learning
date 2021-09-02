@@ -11,20 +11,23 @@
         <div></div>
     </div>
     <script>
-        let $body = document.body;
+        let $body = document.body; //返回body元素
         console.log($body);
 
-        let $html = document.documentElement;
+        let $html = document.documentElement; //返回html元素
         console.log($html);
 
-        let $all = document.all;
+        let $allall = document.all; //返回页面所有元素
+        console.log($allall);
+
+        let $all = document.getElementsByTagName("*");//返回页面所有元素
         console.log($all);
 
         let $sel = document.querySelector("div"); //只查1个，返回第一个匹配
         console.log($sel);
 
-        let $sel = document.querySelectorAll("div"); //查所有，返回类数组
-        console.log($sel);
+        let $selall = document.querySelectorAll("div"); //查所有，返回类数组
+        console.log($selall);
     </script>
 </body>
 </html>
