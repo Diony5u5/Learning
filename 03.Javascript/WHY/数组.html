@@ -9,7 +9,7 @@
     <script>
         //扩展操作符 ... 
         let a = [1,2,3];
-        let b = [0,...a,4];
+        let b = [0,...a,4]; //...a 将a数组的元素展开成1，2，3
 
         console.log(b); // [0,1,2,3,4] , length:5
 
@@ -75,8 +75,59 @@
         aa[aa[2]] = aa[0]; 
         console.log(aa); //["a", 2, 3, "a"]
 
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        var fruitsx = fruits.entries();
+        console.log(fruitsx);
+
+        //检测数组
+        let arrayObject = [a,c,d,b];
+        console.log(Array.isArray(arrayObject));
+  
+        let notArray = 322593;
+        console.log(Array.isArray(notArray));
 
 
+        //数组的栈方法push()、pop()
+
+
+//数组排序
+    //reverse() ：简单的数组反转,改变原数组
+
+        let 字母排序 = ["a","z","g","b"];
+        console.log(字母排序.reverse()); //['b', 'g', 'z', 'a']
+        console.log(字母排序);
+        
+        let 数字排序 = [4,6,10,5,3];
+        console.log(数字排序.reverse()); //[3, 5, 10, 6, 4]
+        console.log(数字排序);
+
+
+    //sort() ：按每个元素的字符串的值，升序排序，改变原数组
+        let values = ["a","z","g","b","A"];
+        console.log(values.sort()); //['A', 'a', 'b', 'g', 'z'] ，大写字母的值小
+        console.log(values);
+
+        let values2 = [4,6,10,5,3];
+        console.log(values2.sort()); //[10, 3, 4, 5, 6]，10的字符串值小
+
+        let values3 = [4,6,10,5,3];
+        values3 = values3.sort((x,y)=> x>y?1 :x<y?-1:0); //数值按升序排
+        console.log(values3);//[3, 4, 5, 6, 10]
+
+        let values4 = [4,6,10,5,3];
+        values4 = values4.sort((a,b)=>{
+            if(a>b){
+                return -1;
+            }else if(a<b){
+                return 1;
+            }else{
+                return 0;
+            }
+        }); //数值按降序排
+        console.log(values4); //[10, 6, 5, 4, 3]
+
+
+        
     </script>
 
 </head>
