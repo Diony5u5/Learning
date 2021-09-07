@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    const m = new Map();
+
+    console.log(m); 
+    console.log(m.size); //0
+
+    const m1 = new Map(
+        [
+            ["name","wanghaoyang"], //[key,value]
+            ["age","34"],
+            ["sex","male"]
+        ]
+    );
+    console.log(m1);
+    console.log(m1.has("name"));//true
+    console.log(m1.has("wanghaoyang"));//false
+    console.log(m1.get("name"));//wanghaoyang
+
+    const m2 = new Map(
+        {
+            [Symbol.iterator]:function*(){
+                yield ["name","wanghaoyang"];
+                yield ["age","34"];
+                yield ["sex","male"];
+            }
+        }
+    )
+    console.log(m2);
+
+    console.log(m1==m2) //false
+
+    const mm = new Map();
+    mm.set("name","wanghaoyang")
+      .set("age","34")
+      .set("sex","male"); //向Map中添加键值对，不要用[]。返回新map
+    console.log(mm); 
+    console.log(mm.size); //3
+    console.log(mm.has("age")); //true
+    console.log(mm.get("name")); //wanghaoyang  返回键name 的值wanghaoyang
+
+    let del = mm.delete("name"); //删除键为name的键值对，返回true或false
+    console.log(del);//true :有这对，成功删除。
+    console.log(mm.get("name")); //undefined
+    console.log(mm.has("name")); //false
+
+    let clr =mm.clear();//删除mm的所有键值对,无返回
+    console.log(mm); //空map
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
